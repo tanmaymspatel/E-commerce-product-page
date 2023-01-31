@@ -9,4 +9,22 @@
         width: 100%;
         border-radius: 12px;
     }
+
+    .cart-counter-box {
+        width: 100%;
+        background-color: $danger;
+        padding: 0.5rem;
+
+        @include breakpoint-up(md) {
+            width: 28%;
+        }
+    }
+
+    .add-to-cart-box {
+        width: 100%;
+
+        @include breakpoint-up(md) {
+            width: 68%;
+        }
+    }
 }
