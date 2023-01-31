@@ -1,8 +1,9 @@
 // // theme Color
-$primary: hsl(209, 23%, 22%); // Dark Blue (Dark Mode Elements)
-$secondary: hsl(0, 0%, 98%); // Very Light Gray (Light Mode Background)
-$info: hsl(207, 26%, 17%); // Very Dark Blue (Dark Mode Background)
-$success: hsl(0, 0%, 52%); // Dark Gray (Light Mode Input)
-$warning: hsl(200, 15%, 8%); // Very Dark Blue (Light Mode Text)
-$light: hsl(0, 0%, 100%); // White (Dark Mode Text & Light Mode Elements)
-$dark: #000;
+$primary: hsl(26, 100%, 55%); // Orange: 
+$secondary: hsl(25, 100%, 94%); // Pale orange: 
+$info: hsl(220, 14%, 75%); // Grayish blue: 
+$success: hsl(220, 13%, 13%); // Very dark blue: 
+$warning: hsl(219, 9%, 45%); // Dark grayish blue:
+$danger: hsl(223, 64%, 98%); // Light grayish blue: 
+$light: hsl(0, 0%, 100%); // White 
+$dark: hsl(0, 0%, 0%); // Black (with 75% opacity for lightbox background): 
