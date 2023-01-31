@@ -90,6 +90,10 @@ button {
     justify-content: space-between;
 }
 
+.justify-content-end {
+    justify-content: end;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -137,4 +141,18 @@ button {
 //spacing
 .mb-0 {
     margin-bottom: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+// position
+.position-relative {
+    position: relative;
 }
