@@ -1,0 +1,12 @@
+.product-page-col {
+    width: 100%;
+
+    @include breakpoint-up(md) {
+        width: 45%;
+    }
+
+    .product-image {
+        width: 100%;
+        border-radius: 12px;
+    }
+}
