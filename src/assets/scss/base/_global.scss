@@ -110,13 +110,6 @@ button {
     margin: 0 auto;
 }
 
-
-// space
-
-.mb-0 {
-    margin-bottom: 0;
-}
-
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -139,4 +132,9 @@ button {
     .container {
         max-width: 1140px;
     }
+}
+
+//spacing
+.mb-0 {
+    margin-bottom: 0;
 }
