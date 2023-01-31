@@ -7,7 +7,7 @@ function App() {
       <header id="header">
         <Header />
       </header>
-      <main className="main-content flex-grow-1 overflow-hidden">
+      <main className="h-100 main-content flex-grow-1 overflow-hidden">
         <ProductPage />
       </main>
     </div>
