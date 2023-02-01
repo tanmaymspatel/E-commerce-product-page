@@ -111,6 +111,16 @@
             }
         }
 
+        .cart-count {
+            top: -5px;
+            right: -5px;
+            background-color: $primary;
+            padding: 3px 5px;
+            font-size: 0.5rem;
+            color: $light;
+            border-radius: 50%;
+        }
+
         .cart-heading {
             flex: 0 0 60px;
             border-bottom: 1px solid $info;

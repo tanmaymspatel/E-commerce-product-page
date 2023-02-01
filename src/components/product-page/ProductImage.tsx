@@ -3,7 +3,7 @@ import { ProductImages } from './productImages';
 
 function ProductImage() {
     const [prodIndex, setProdIndex] = useState(0);
-    const { image } = ProductImages[prodIndex]
+    const { image } = ProductImages[prodIndex];
     return (
         <section>
             <figure>
