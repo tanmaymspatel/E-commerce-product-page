@@ -10,21 +10,94 @@
         border-radius: 12px;
     }
 
-    .cart-counter-box {
-        width: 100%;
-        background-color: $danger;
-        padding: 0.5rem;
+    .thumbnail-container {
+        padding: 1rem 0;
 
-        @include breakpoint-up(md) {
-            width: 28%;
+        .product-thumbnail {
+            width: 80px;
+            border-radius: 12px;
+            border: 3px solid transparent;
+
+            &.active-thumb {
+                border: 3px solid $primary;
+                opacity: 60%;
+            }
         }
+
     }
 
-    .add-to-cart-box {
-        width: 100%;
+    .product-subtitle {
+        text-transform: uppercase;
+        color: $primary;
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        letter-spacing: 2px;
+    }
 
-        @include breakpoint-up(md) {
-            width: 68%;
+    .product-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 1rem 0;
+        line-height: 50px;
+    }
+
+    .product-description {
+        color: $warning;
+        margin: 2rem 0;
+    }
+
+    .discount-price {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .discount-badge {
+        padding: 0.25rem 0.5rem;
+        color: $primary;
+        background-color: rgba($primary, 0.15);
+        margin-left: 1.25rem;
+        font-weight: 700;
+        border-radius: 6px;
+    }
+
+    .original-price {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        color: $info;
+        text-decoration: line-through;
+    }
+
+    .cart-action {
+        margin: 3rem 0;
+
+        .cart-counter-box {
+            width: 100%;
+            background-color: $danger;
+            padding: 1.25rem;
+            border-radius: 12px;
+
+            @include breakpoint-up(md) {
+                width: 34%;
+            }
+        }
+
+        .add-to-cart-box {
+            width: 100%;
+            box-shadow: 6px 7px 32px 8px rgba($primary, 0.3);
+            border-radius: 12px;
+
+            @include breakpoint-up(md) {
+                width: 64%;
+            }
+        }
+
+        .cart-image {
+            margin: 0 0.5rem;
+            width: 16px;
+        }
+
+        .cart-btn-text {
+            font-weight: 700;
         }
     }
 }
