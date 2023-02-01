@@ -9,7 +9,7 @@ function ProductPage() {
                     <div className="product-page-col">
                         <ProductImage />
                     </div>
-                    <div className="product-page-col">
+                    <div className="product-page-col d-flex flex-column justify-content-center">
                         <ProductDetails />
                     </div>
                 </div>
