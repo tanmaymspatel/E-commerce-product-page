@@ -1,0 +1,35 @@
+.back-drop {
+    position: fixed;
+    background-color: rgba($dark, 0.95);
+    z-index: 20;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.model-content {
+    position: fixed;
+    z-index: 30;
+
+    .product-image {
+        height: auto;
+
+        @include breakpoint-up(sm) {
+            height: 500px;
+        }
+
+    }
+
+
+    .lightbox-close {
+        top: -5%;
+        right: -5%;
+        color: $primary;
+        width: 20px;
+    }
+}
+
+.product-page-col .model-content .slider-arrow {
+    display: block;
+}

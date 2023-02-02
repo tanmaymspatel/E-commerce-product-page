@@ -7,11 +7,20 @@
 
     .product-image {
         width: 100%;
-        border-radius: 12px;
+
+        @include breakpoint-up(md) {
+            border-radius: 12px;
+
+        }
     }
 
     .thumbnail-container {
         padding: 1rem 0;
+        display: none;
+
+        @include breakpoint-up(md) {
+            display: block;
+        }
 
         .product-thumbnail {
             width: 80px;
@@ -21,6 +30,35 @@
             &.active-thumb {
                 border: 3px solid $primary;
                 opacity: 60%;
+            }
+        }
+
+    }
+
+    .slider-arrow {
+        top: 50%;
+        background-color: $light;
+        padding: 0.875rem 1rem;
+        border-radius: 50%;
+        display: flex;
+
+        @include breakpoint-up(md) {
+            display: none;
+        }
+
+        &.left-arrow {
+            left: 2%;
+
+            @include breakpoint-up(md) {
+                left: -5%;
+            }
+        }
+
+        &.right-arrow {
+            right: 2%;
+
+            @include breakpoint-up(md) {
+                right: -5%;
             }
         }
 

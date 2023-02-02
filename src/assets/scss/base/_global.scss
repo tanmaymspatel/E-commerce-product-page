@@ -114,9 +114,10 @@ button {
     margin: 0 auto;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 768px) {
     .container {
-        max-width: 540px;
+        padding: 0;
+        // max-width: 540px;
     }
 }
 
@@ -166,7 +167,7 @@ button {
 }
 
 .section {
-    padding: 1rem 0;
+    padding: 0;
 
     @include breakpoint-up (md) {
         padding: 5rem 0;
