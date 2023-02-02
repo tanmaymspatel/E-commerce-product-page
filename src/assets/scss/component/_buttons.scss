@@ -3,9 +3,18 @@
     background-color: transparent;
     border: none;
     border-radius: 12px;
+    transition: $transition-timing all;
+
+    &:hover {
+        opacity: 70%;
+    }
 
     &:focus-visible {
         outline: none;
+    }
+
+    .btn-text {
+        font-weight: 700;
     }
 }
 

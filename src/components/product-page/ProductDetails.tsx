@@ -7,10 +7,11 @@ import CartContext from '../../context/cart-context/cartContext'
 
 function ProductDetails() {
 
-    const { count, setCount } = useContext(CartContext);
-    const [prodCount, setProdCount] = useState(0)
+    const { setCount } = useContext(CartContext);
+    const [prodCount, setProdCount] = useState(0);
+
     return (
-        <div className="p-3">
+        <>
             <h6 className="product-subtitle">Sneaker Company</h6>
             <h2 className="product-title">Fall Limited Edition Sneakers</h2>
             <p className="product-description">
@@ -34,7 +35,7 @@ function ProductDetails() {
                     </button>
                 </div>
             </div>
-        </div>
+        </>
     )
 };
 
