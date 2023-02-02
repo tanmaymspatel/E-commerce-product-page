@@ -21,7 +21,11 @@
 
     .logo-container {
         flex: 0 0 150px;
-        margin-right: 1rem;
+        margin-right: 0;
+
+        @include breakpoint-up(md) {
+            margin-right: 1rem;
+        }
     }
 
     .main-nav {
@@ -79,7 +83,12 @@
     }
 
     .cart-image-container {
-        margin: 0 2.5rem;
+        margin: 0 1rem;
+        cursor: pointer;
+
+        @include breakpoint-up(md) {
+            margin: 0 2.5rem;
+        }
 
         &:hover,
         &:active {
@@ -93,12 +102,13 @@
             top: 90%;
             left: 3%;
             width: 95%;
-            height: 300px;
+            height: 250px;
             background-color: $light;
             box-shadow: 0 0 12px 2px rgba($dark, 0.1);
             border-radius: $border-radius;
             transform: translateY(-150%);
             transition: $transition-timing all;
+            z-index: 1;
 
             @include breakpoint-up(md) {
                 left: 0%;
@@ -107,8 +117,18 @@
 
             @include breakpoint-up(lg) {
                 top: 120%;
-                width: 110%;
+                width: 120%;
             }
+        }
+
+        .cart-count {
+            top: -5px;
+            right: -5px;
+            background-color: $primary;
+            padding: 2px 6px;
+            font-size: 0.5rem;
+            color: $light;
+            border-radius: 50%;
         }
 
         .cart-heading {
@@ -118,7 +138,52 @@
         }
 
         .cart-body {
-            padding: 1rem;
+            padding: 0.75rem;
+
+            @include breakpoint-up(sm) {
+                padding: 1.55rem;
+            }
+
+            .cart-product-thumbnail {
+                height: 50px;
+                border-radius: 4px;
+            }
+
+            .cart-product {
+                margin-bottom: 0.5rem;
+
+            }
+
+            .cart-calculation,
+            .cart-product {
+                color: $warning;
+                font-size: 0.875rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                max-width: 200px;
+
+                @include breakpoint-up(x-sm) {
+                    font-size: 1rem;
+                    overflow: auto;
+                    max-width: 100%;
+                }
+
+            }
+
+            .cart-total {
+                color: $dark;
+                font-weight: 700;
+            }
+
+            .checkout-container {
+                margin: 1.25rem 0 1rem;
+            }
+
+            .empty-cart-text {
+                font-weight: 700;
+                color: $warning;
+            }
         }
     }
 

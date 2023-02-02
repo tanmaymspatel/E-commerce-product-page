@@ -68,7 +68,11 @@
     }
 
     .cart-action {
-        margin: 3rem 0;
+        margin: 1rem 0;
+
+        @include breakpoint-up(md) {
+            margin: 3rem 0;
+        }
 
         .cart-counter-box {
             width: 100%;
@@ -96,8 +100,6 @@
             width: 16px;
         }
 
-        .cart-btn-text {
-            font-weight: 700;
-        }
+
     }
 }

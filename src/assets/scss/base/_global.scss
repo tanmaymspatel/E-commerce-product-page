@@ -161,8 +161,17 @@ button {
     position: relative;
 }
 
+.position-absolute {
+    position: absolute;
+}
+
 .section {
-    padding: 5rem 0;
+    padding: 1rem 0;
+
+    @include breakpoint-up (md) {
+        padding: 5rem 0;
+
+    }
 }
 
 li {
