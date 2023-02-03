@@ -118,14 +118,14 @@
 
         @include breakpoint-up(md) {
             margin: 0 2.5rem;
-        }
 
-        &:hover,
-        &:active {
-            .cart-items-box {
-                transform: translateY(0%);
+            &:hover {
+                .cart-items-box {
+                    transform: translateY(0%);
+                }
             }
         }
+
 
         .cart-items-box {
             position: absolute;
@@ -302,5 +302,20 @@
         transition: $transition-timing all;
         color: $dark;
         font-weight: 700;
+    }
+}
+
+// cart toggle only in small screens
+#cartToggle {
+    display: none;
+
+    @include breakpoint-down(md) {
+        &:checked {
+            &~.right-nav {
+                .cart-items-box {
+                    transform: translateY(0%);
+                }
+            }
+        }
     }
 }

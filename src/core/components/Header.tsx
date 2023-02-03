@@ -31,11 +31,14 @@ function Header() {
                     <nav className='left-nav h-100 flex-grow-1 d-flex align-items-center'>
                         <NavLinks />
                     </nav>
+                    <input type="checkbox" id='cartToggle' name='cart-toggle' />
                     <nav className='right-nav'>
                         <div className='nav-action d-flex align-items-center'>
                             <div className='cart-image-container'>
                                 <figure className='position-relative'>
-                                    <img src={cartImage} alt="cart-icon" />
+                                    <label htmlFor="cartToggle">
+                                        <img src={cartImage} alt="cart-icon" />
+                                    </label>
                                     {count > 0 && <small className='position-absolute cart-count'>{count}</small>}
                                 </figure>
                                 <div className='cart-items-box d-flex flex-column'>
