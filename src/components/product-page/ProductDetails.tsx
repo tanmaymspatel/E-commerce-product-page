@@ -4,10 +4,13 @@ import minusImage from '../../assets/images/icon-minus.svg'
 import plusImage from '../../assets/images/icon-plus.svg'
 import cartImage from '../../assets/images/icon-cart-white.svg'
 import CartContext from '../../context/cart-context/cartContext'
-
+/**
+ * @returns A component showing the information of the product 
+ */
 function ProductDetails() {
 
     const { setCount } = useContext(CartContext);
+    // state for increasing cart items for this component only
     const [prodCount, setProdCount] = useState(0);
 
     return (

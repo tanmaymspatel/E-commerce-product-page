@@ -14,7 +14,7 @@
         margin: 0 1rem;
         cursor: pointer;
 
-        @include breakpoint-up(lg) {
+        @include breakpoint-up(md) {
             display: none;
         }
     }
@@ -37,38 +37,67 @@
     }
 
     .left-nav {
+
         display: none;
 
-        @include breakpoint-up(lg) {
+
+        @include breakpoint-up(md) {
+            // position: relative;
             display: block;
         }
-    }
 
-    .nav-item {
-        cursor: pointer;
-        margin: 0 0.5rem;
-        list-style: none;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        border-bottom: 5px solid transparent;
-        transition: $transition-timing all;
-        color: $warning;
+        .link-container {
+            flex-direction: column;
+            padding: 6rem 1rem 1rem;
+            align-items: flex-start;
 
-        @include breakpoint-up(lg) {
-            margin: 0 1rem;
+            @include breakpoint-up (md) {
+                align-items: center;
+                flex-direction: row;
+                padding: 0;
+            }
         }
 
-        &:hover,
-        :active {
-            border-color: $primary;
+        .nav-item {
+            cursor: pointer;
+            margin: 0.5rem;
+            list-style: none;
+            height: auto;
+            display: flex;
+            align-items: center;
+            border-bottom: 5px solid transparent;
+            transition: $transition-timing all;
             color: $dark;
-            font-weight: 400;
+            font-weight: 700;
+
+            @include breakpoint-up(md) {
+                color: $warning;
+                height: 100%;
+                margin: 0 0.5rem;
+                font-weight: 400;
+            }
+
+            @include breakpoint-up(lg) {
+                margin: 0 1rem;
+            }
+
+            &:hover,
+            :active {
+                border-color: $primary;
+                color: $dark;
+                font-weight: 400;
+            }
         }
     }
+
 
     .right-nav {
         flex: 0 0 auto;
+        margin-right: 1rem;
+
+        @include breakpoint-up(md) {
+            margin-right: 0;
+        }
 
         @include breakpoint-up(lg) {
             position: relative;
@@ -197,5 +226,89 @@
         &:hover {
             border-color: $primary;
         }
+    }
+
+
+
+}
+
+#mobileMenu {
+    display: none;
+
+    &:checked {
+        &~.mobile-nav {
+            transform: translateX(0%);
+
+            .close-menu {
+                visibility: visible;
+            }
+        }
+
+        &~.wrapper {
+            position: relative;
+
+            &::before {
+                background-color: rgba($dark, 0.7);
+                content: "";
+                display: block;
+                height: 100%;
+                position: absolute;
+                width: 100%;
+                z-index: 1;
+
+                #header {
+                    background-color: aqua;
+                    display: none;
+
+
+
+                }
+            }
+        }
+
+    }
+}
+
+.mobile-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 65%;
+    width: 65%;
+    background-color: $light;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: $transition-timing all;
+
+
+    @include breakpoint-up(sm) {
+        width: 50%;
+    }
+
+    @include breakpoint-up(md) {
+        display: none;
+    }
+
+    .close-menu {
+        z-index: 99;
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        visibility: hidden;
+    }
+
+    .link-container {
+        padding: 5rem 1rem 1rem;
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 0.75rem 0.5rem;
+        list-style: none;
+        transition: $transition-timing all;
+        color: $dark;
+        font-weight: 700;
     }
 }
