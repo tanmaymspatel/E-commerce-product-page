@@ -1,6 +1,6 @@
 .back-drop {
     position: fixed;
-    background-color: rgba($dark, 0.95);
+    background-color: rgba($dark, 0.7);
     z-index: 20;
     top: 0;
     right: 0;
@@ -12,21 +12,34 @@
     position: fixed;
     z-index: 30;
 
-    .product-image {
-        height: auto;
+    .main-image {
+        margin: 1rem;
 
-        @include breakpoint-up(sm) {
-            height: 500px;
+        @include breakpoint-up(md) {
+            margin: 0;
         }
 
+        .product-image {
+            height: auto;
+            border-radius: 12px;
+
+            @include breakpoint-up(sm) {
+                height: 500px;
+            }
+
+        }
     }
 
 
+
     .lightbox-close {
-        top: -5%;
-        right: -5%;
+        top: -8%;
+        right: 0;
         color: $primary;
-        width: 20px;
+
+        .close-icon {
+            width: 20px;
+        }
     }
 }
 

@@ -17,11 +17,13 @@ function ProductDetails() {
             <p className="product-description">
                 These low profile sneakers are your perfect casual wear campanion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
             </p>
-            <div className="row align-items-center">
-                <h4 className="discount-price">$125.00</h4>
-                <p className="discount-badge">50%</p>
+            <div className="row align-items-center justify-content-between">
+                <div className='d-flex align-items-center'>
+                    <h4 className="discount-price">$125.00</h4>
+                    <p className="discount-badge">50%</p>
+                </div>
+                <h6 className="original-price">$250.00</h6>
             </div>
-            <h6 className="original-price">$250.00</h6>
             <div className="cart-action row justify-content-between align-items-center">
                 <div className="cart-counter-box d-flex align-items-center justify-content-between">
                     <img className='cursor-pointer' src={minusImage} alt="minus-icon" onClick={() => setProdCount(prev => prev > 0 ? prev - 1 : 0)} />

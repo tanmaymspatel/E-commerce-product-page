@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import close from '../../assets/images/icon-close.svg'
+import close from '../../assets/images/icon-close-white.svg'
 
 function LightBox({
     ProductImages,
@@ -21,10 +21,9 @@ function LightBox({
     }
     return (
         <>
-            <div className="cursor-pointer back-drop h-100 d-flex align-items-center justify-content-center"
-                onClick={() => setShoeLightbox(false)}>
+            <div className="cursor-pointer back-drop h-100 d-flex align-items-center justify-content-center">
                 <div className="model-content">
-                    <figure className='position-relative'>
+                    <figure className='main-image position-relative'>
                         <img src={image} alt="product-1" className='product-image' />
                         <img src={leftArrow} alt="left-slide-arrow" className='position-absolute slider-arrow cursor-pointer left-arrow'
                             onClick={() => prevSlide()}
@@ -32,7 +31,9 @@ function LightBox({
                         <img src={rightArrow} alt="right-slide-arrow" className='position-absolute slider-arrow cursor-pointer right-arrow'
                             onClick={() => nextslide()}
                         />
-                        <img src={close} alt="close-btn" className="cursor-pointer lightbox-close position-absolute" onClick={() => setShoeLightbox(false)} />
+                        <p className="cursor-pointer lightbox-close position-absolute" onClick={() => setShoeLightbox(false)}>
+                            <img src={close} alt="close-btn" className="close-icon" />
+                        </p>
                     </figure>
                     <div className='thumbnail-container'>
                         <ul className='row justify-content-between'>
