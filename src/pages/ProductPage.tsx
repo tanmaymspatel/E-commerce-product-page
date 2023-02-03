@@ -1,6 +1,8 @@
 import ProductDetails from "../components/product-page/ProductDetails";
 import ProductImage from "../components/product-page/ProductImage";
-
+/**
+ * @returns Whole product page
+ */
 function ProductPage() {
     return (
         <section className="section">

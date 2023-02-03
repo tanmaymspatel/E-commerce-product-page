@@ -3,9 +3,11 @@ import { useContext } from 'react'
 import productThumb from '../../assets/images/image-product-1-thumbnail.jpg'
 import iconDelete from '../../assets/images/icon-delete.svg'
 import CartContext from '../../context/cart-context/cartContext'
-
+/**
+ * @returns Cart component 
+ */
 function CartBody() {
-    const { count } = useContext(CartContext);
+    const { count, setCount } = useContext(CartContext);
 
     return (
         <div>
@@ -18,7 +20,8 @@ function CartBody() {
                     <p className='cart-calculation'><span>{`$125.00 x ${count}`} </span><span className='cart-total'>{`$${(125.00 * count).toFixed(2)}`}</span></p>
                 </div>
                 <figure >
-                    <img src={iconDelete} alt="delete-cart-item" className='cursor-pointer' />
+                    <img src={iconDelete} alt="delete-cart-item" className='cursor-pointer'
+                        onClick={() => setCount(0)} />
                 </figure>
             </div>
             <div className='checkout-container'>

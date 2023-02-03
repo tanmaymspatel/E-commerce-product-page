@@ -4,51 +4,32 @@ import brandLogo from '../../assets/images/logo.svg'
 import cartImage from '../../assets/images/icon-cart.svg'
 import avatar from '../../assets/images/image-avatar.png'
 import hamburger from '../../assets/images/icon-menu.svg'
+
 import CartContext from '../../context/cart-context/cartContext'
 import CartBody from './CartBody'
-
+import NavLinks from './NavLinks'
+/**
+ * @returns Header of the page 
+ */
 function Header() {
 
-    const { count } = useContext(CartContext)
+    const { count } = useContext(CartContext);
 
     return (
         <div className="h-100 container header-container">
             <div className="h-100 d-flex justify-content-between align-items-center">
                 <div className='mobile-menu'>
-                    <img src={hamburger} alt="hamburger-menu" />
+                    <label htmlFor="mobileMenu">
+                        <img src={hamburger} alt="hamburger-menu" className='cursor-pointer' />
+
+                    </label>
                 </div>
                 <div className='logo-container'>
                     <img src={brandLogo} alt="sneakers-logo" />
                 </div>
                 <div className='main-nav h-100 flex-grow-1 d-flex align-items-center'>
                     <nav className='left-nav h-100 flex-grow-1 d-flex align-items-center'>
-                        <ul className='h-100 d-flex align-items-center'>
-                            <li className='nav-item'>
-                                <span className='nav-link'>
-                                    Collections
-                                </span>
-                            </li>
-                            <li className='nav-item'>
-                                <span className='nav-link'>
-                                    Men
-                                </span>
-                            </li>
-                            <li className='nav-item'>
-                                <span className='nav-link'>
-                                    Women
-                                </span>
-                            </li>
-                            <li className='nav-item'>
-                                <span className='nav-link'>
-                                    About
-                                </span>
-                            </li>
-                            <li className='nav-item'>
-                                <span className='nav-link'>
-                                    Contact
-                                </span>
-                            </li>
-                        </ul>
+                        <NavLinks />
                     </nav>
                     <nav className='right-nav'>
                         <div className='d-flex align-items-center'>
