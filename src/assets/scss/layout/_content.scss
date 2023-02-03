@@ -1,3 +1,4 @@
+// product page columns styles
 .product-page-col {
     width: 100%;
 
@@ -22,6 +23,7 @@
         }
     }
 
+    // image thumbnail styles
     .thumbnail-container {
         padding: 1rem 0;
         display: none;
@@ -47,6 +49,7 @@
 
     }
 
+    // image slider styles
     .slider-arrow {
         top: 50%;
         background-color: $light;
@@ -76,6 +79,7 @@
 
     }
 
+    //product information styles
     .product-subtitle {
         text-transform: uppercase;
         color: $primary;
@@ -110,15 +114,15 @@
         @include breakpoint-up(md) {
             margin: 1rem 0 2rem;
         }
-
-        // @include breakpoint-up(lg) {
-        //     margin: 2rem 0;
-        // }
     }
 
     .discount-price {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 700;
+
+        @include breakpoint-up (sm) {
+            font-size: 2rem;
+        }
     }
 
     .discount-badge {
@@ -128,6 +132,11 @@
         margin-left: 1.25rem;
         font-weight: 700;
         border-radius: 6px;
+        font-size: 0.875rem;
+
+        @include breakpoint-up(sm) {
+            font-size: 1rem;
+        }
     }
 
     .original-price {
@@ -141,6 +150,7 @@
         }
     }
 
+    // cart styles in product info column
     .cart-action {
         margin: 1rem 0;
 

@@ -32,7 +32,7 @@ function Header() {
                         <NavLinks />
                     </nav>
                     <nav className='right-nav'>
-                        <div className='d-flex align-items-center'>
+                        <div className='nav-action d-flex align-items-center'>
                             <div className='cart-image-container'>
                                 <figure className='position-relative'>
                                     <img src={cartImage} alt="cart-icon" />

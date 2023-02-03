@@ -1,3 +1,4 @@
+//header styles
 #header {
     flex: 0 0 $header-size;
 
@@ -42,7 +43,6 @@
 
 
         @include breakpoint-up(md) {
-            // position: relative;
             display: block;
         }
 
@@ -104,13 +104,14 @@
             flex: 0 0 300px;
         }
 
-        &>div {
+        .nav-action {
             @include breakpoint-up(lg) {
                 justify-content: end;
             }
         }
     }
 
+    // header cart styles
     .cart-image-container {
         margin: 0 1rem;
         cursor: pointer;
@@ -216,6 +217,7 @@
         }
     }
 
+    // header avatar styles
     .avatar-container {
         height: 45px;
         width: 45px;
@@ -227,11 +229,9 @@
             border-color: $primary;
         }
     }
-
-
-
 }
 
+// mobile menu styles for small screens
 #mobileMenu {
     display: none;
 
@@ -255,20 +255,13 @@
                 position: absolute;
                 width: 100%;
                 z-index: 1;
-
-                #header {
-                    background-color: aqua;
-                    display: none;
-
-
-
-                }
             }
         }
 
     }
 }
 
+// mobile navigation links styles
 .mobile-nav {
     position: absolute;
     top: 0;
@@ -281,7 +274,6 @@
     z-index: 2;
     transform: translateX(-100%);
     transition: $transition-timing all;
-
 
     @include breakpoint-up(sm) {
         width: 50%;

@@ -30,8 +30,6 @@
         }
     }
 
-
-
     .lightbox-close {
         top: -8%;
         right: 0;
@@ -43,6 +41,10 @@
     }
 }
 
-.product-page-col .model-content .slider-arrow {
-    display: block;
+.product-page-col {
+    .model-content {
+        .slider-arrow {
+            display: block;
+        }
+    }
 }
