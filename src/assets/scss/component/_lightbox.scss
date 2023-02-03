@@ -1,0 +1,48 @@
+.back-drop {
+    position: fixed;
+    background-color: rgba($dark, 0.7);
+    z-index: 20;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.model-content {
+    position: fixed;
+    z-index: 30;
+
+    .main-image {
+        margin: 1rem;
+
+        @include breakpoint-up(md) {
+            margin: 0;
+        }
+
+        .product-image {
+            height: auto;
+            border-radius: 12px;
+
+            @include breakpoint-up(sm) {
+                height: 500px;
+            }
+
+        }
+    }
+
+
+
+    .lightbox-close {
+        top: -8%;
+        right: 0;
+        color: $primary;
+
+        .close-icon {
+            width: 20px;
+        }
+    }
+}
+
+.product-page-col .model-content .slider-arrow {
+    display: block;
+}
